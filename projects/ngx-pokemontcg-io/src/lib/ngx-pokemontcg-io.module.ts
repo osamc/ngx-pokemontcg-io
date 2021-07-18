@@ -8,4 +8,4 @@ import { PokemontcgIoService } from './services/pokemontcg-io.service';
   exports: [],
   providers: [PokemontcgIoService]
 })
-export class NgxPtcgIoModule {}
+export class NgxPokemonTcgIoModule {}

@@ -18,34 +18,6 @@ export class PokemontcgIoService {
   constructor(private httpClient: HttpClient) {}
 
   /**
-   * Get the configured API Key
-   * @returns {string}
-   * */
-  public get apiKey(): string {
-    return this._apiKey;
-  }
-
-  /**
-   * Set the API key for the service
-   * @param {string} key - The API Key to set
-   * */
-  public set apiKey(key: string) {
-    this._apiKey = key;
-  }
-
-  private getHeader(): HttpHeaders {
-    let header = new HttpHeaders();
-    header = header.set(HeaderConsts.API_KEY, this._apiKey);
-    return header;
-  }
-
-  private getHttpOptions(): Object {
-    let options = { headers: this.getHeader() };
-    console.log(options);
-    return options;
-  }
-
-  /**
    * Get a card from it's given Card ID
    * @param {string} cardId - The Card ID to retrieve
    * @returns {Card}
@@ -156,5 +128,33 @@ export class PokemontcgIoService {
         return res.data;
       })
     );
+  }
+
+  /**
+   * Get the configured API Key
+   * @returns {string}
+   * */
+  public get apiKey(): string {
+    return this._apiKey;
+  }
+
+  /**
+   * Set the API key for the service
+   * @param {string} key - The API Key to set
+   * */
+  public set apiKey(key: string) {
+    this._apiKey = key;
+  }
+
+  private getHeader(): HttpHeaders {
+    let header = new HttpHeaders();
+    header = header.set(HeaderConsts.API_KEY, this._apiKey);
+    return header;
+  }
+
+  private getHttpOptions(): Object {
+    let options = { headers: this.getHeader() };
+    console.log(options);
+    return options;
   }
 }

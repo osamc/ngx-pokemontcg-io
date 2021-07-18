@@ -1,7 +1,7 @@
 /*
  * Public API Surface of ngx-ptcg-io
  */
-export * from './lib/ngx-ptcg-io.module';
+export * from './lib/ngx-pokemontcg-io.module';
 
 export * from './lib/models/card/Card'
 
