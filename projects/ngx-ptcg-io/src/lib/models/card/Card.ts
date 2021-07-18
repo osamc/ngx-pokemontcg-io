@@ -6,6 +6,9 @@ import { Attack } from './components/Attack';
 import { Weakness } from './components/Weakness';
 import { Set } from '../set/Set';
 
+/**
+ * A Card interface as defined by {@link https://docs.pokemontcg.io/api-reference/cards/card-object}
+ */
 export interface Card {
   id?: string;
   name?: string;

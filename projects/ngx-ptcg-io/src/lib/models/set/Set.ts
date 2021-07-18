@@ -1,17 +1,20 @@
 import { Legalities } from '../common/Legalities';
 import { Images } from './Images';
 
+/**
+ * An interface for a Card Set as defined at {@link https://docs.pokemontcg.io/api-reference/sets/set-object}
+*/
 export interface Set {
-  id: string;
-  name: string;
-  series: string;
-  printedTotal: number;
-  total: number;
-  legalities: Legalities;
-  ptcgoCode: string;
-  releaseDate: string;
-  updatedAt: string;
-  images: Images;
+  id?: string;
+  name?: string;
+  series?: string;
+  printedTotal?: number;
+  total?: number;
+  legalities?: Legalities;
+  ptcgoCode?: string;
+  releaseDate?: string;
+  updatedAt?: string;
+  images?: Images;
 }
 
 export class SetSearch {
