@@ -23,4 +23,7 @@ export * from './lib/models/search/properties/MultiValueProperty';
 export * from './lib/models/search/properties/RangeProperty';
 export * from './lib/models/search/properties/SingleValueProperty';
 
+export * from './lib/models/set/Images';
+export * from './lib/models/set/Set';
+
 export {PokemontcgIoService} from './lib/services/pokemontcg-io.service'

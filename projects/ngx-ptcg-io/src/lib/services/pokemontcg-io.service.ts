@@ -69,4 +69,46 @@ export class PokemontcgIoService {
     );
   }
 
+  public searchSet(filter: Filter): Observable<SearchResult<Set>> {
+    let url = UrlConsts.BASE_URL + UrlConsts.GET_SET + filter.toString();
+    return this.httpClient.get<SearchResult<Set>>(url, this.getHttpOptions());
+  }
+
+  public getTypes(): Observable<Array<string>> {
+    let url = UrlConsts.BASE_URL + UrlConsts.GET_TYPES;
+    return this.httpClient.get<Set>(url, this.getHttpOptions()).pipe(
+      map((res: any) => {
+        return res.data;
+      })
+    );
+  }
+
+  public getSubTypes(): Observable<Array<string>> {
+    let url = UrlConsts.BASE_URL + UrlConsts.GET_SUBTYPES;
+    return this.httpClient.get<Set>(url, this.getHttpOptions()).pipe(
+      map((res: any) => {
+        return res.data;
+      })
+    );
+  }
+
+  public getSuperTypes(): Observable<Array<string>> {
+    let url = UrlConsts.BASE_URL + UrlConsts.GET_SUPERTYPES;
+    return this.httpClient.get<Set>(url, this.getHttpOptions()).pipe(
+      map((res: any) => {
+        return res.data;
+      })
+    );
+  }
+
+  public getRarities(): Observable<Array<string>> {
+    let url = UrlConsts.BASE_URL + UrlConsts.GET_RARITIES;
+    return this.httpClient.get<Set>(url, this.getHttpOptions()).pipe(
+      map((res: any) => {
+        return res.data;
+      })
+    );
+  }
+
+
 }

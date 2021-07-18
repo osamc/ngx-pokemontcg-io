@@ -29,3 +29,35 @@ export interface Card {
   images?: CardArt;
   tcgplayer?: TcgPlayer;
 }
+
+export class CardSearch {
+  public static readonly ID = 'id';
+  public static readonly NAME = 'name';
+  public static readonly SUPER_TYPE = 'supertype';
+  public static readonly SUB_TYPES = 'subtypes';
+  public static readonly HP = 'hp';
+  public static readonly TYPES = 'types';
+  public static readonly EVOLVES_FROM = 'evolvesFrom';
+  public static readonly RETREAT_COST = 'retreatCost';
+  public static readonly RETREAT_COST_COUNT = 'convertedRetreatCost';
+  public static readonly NUMBER = 'number';
+  public static readonly ARTIST = 'artist';
+  public static readonly FLAVOUR_TEXT = 'flavorText';
+  public static readonly NATIONAL_POKEDEX_NUMBERS = 'nationalPokedexNumbers';
+
+  public static readonly options: string[] = [
+    CardSearch.ID,
+    CardSearch.NAME,
+    CardSearch.SUPER_TYPE,
+    CardSearch.SUB_TYPES,
+    CardSearch.HP,
+    CardSearch.TYPES,
+    CardSearch.EVOLVES_FROM,
+    CardSearch.RETREAT_COST,
+    CardSearch.RETREAT_COST_COUNT,
+    CardSearch.NUMBER,
+    CardSearch.ARTIST,
+    CardSearch.FLAVOUR_TEXT,
+    CardSearch.NATIONAL_POKEDEX_NUMBERS,
+  ];
+}
