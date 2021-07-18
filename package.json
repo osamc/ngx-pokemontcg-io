@@ -1,5 +1,5 @@
 {
-  "name": "my-workspace",
+  "name": "ngx-pokemontcg-io",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~12.1.2",
     "@angular/common": "~12.1.2",
