@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-ptcg-io",
+  "dest": "../../dist/ngx-pokemontcg-io",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

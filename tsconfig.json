@@ -12,9 +12,9 @@
     "declaration": false,
     "downlevelIteration": true,
     "paths": {
-      "ngx-ptcg-io": [
-        "dist/ngx-ptcg-io/ngx-ptcg-io",
-        "dist/ngx-ptcg-io"
+      "ngx-pokemontcg-io": [
+        "dist/ngx-pokemontcg-io/ngx-pokemontcg-io",
+        "dist/ngx-pokemontcg-io"
       ]
     },
     "experimentalDecorators": true,

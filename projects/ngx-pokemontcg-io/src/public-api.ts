@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngx-ptcg-io
+ * Public API Surface of ngx-pokemontcg-io
  */
 export * from './lib/ngx-pokemontcg-io.module';
 
