@@ -27,3 +27,4 @@ export * from './lib/models/set/Images';
 export * from './lib/models/set/Set';
 
 export {PokemontcgIoService} from './lib/services/pokemontcg-io.service'
+
