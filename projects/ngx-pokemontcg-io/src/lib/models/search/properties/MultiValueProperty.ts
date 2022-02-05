@@ -1,6 +1,6 @@
-import { BaseProperty } from "./BaseProperty";
+import { BaseProperty } from './BaseProperty';
 
-export class MutliValueProperty extends BaseProperty {
+export class MultiValueProperty extends BaseProperty {
 
   values: string[];
 

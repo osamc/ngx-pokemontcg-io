@@ -1,5 +1,6 @@
 import { BaseProperty } from './BaseProperty';
 
+
 export class SingleValueProperty extends BaseProperty {
   value: string;
 

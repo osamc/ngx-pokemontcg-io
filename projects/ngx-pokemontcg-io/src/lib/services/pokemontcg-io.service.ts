@@ -1,13 +1,11 @@
-import { SearchResult } from './../models/search/SearchResult';
-import { HeaderConsts } from './../const/Headers';
-import { UrlConsts } from './../const/Urls';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Card } from '../models/card/Card';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Injectable, Inject } from "@angular/core";
+import { Observable } from "rxjs";
+import { Card, Filter, BaseProperty, SingleValueProperty, SetSearch, Set } from "../../public-api";
+import { HeaderConsts } from "../const/Headers";
+import { UrlConsts } from "../const/Urls";
+import { SearchResult } from "../models/search/SearchResult";
 import { map } from 'rxjs/operators';
-import { Set, SetSearch } from '../models/set/Set';
-import { Filter } from '../models/search/Filter';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +13,7 @@ import { Filter } from '../models/search/Filter';
 export class PokemontcgIoService {
   private _apiKey!: string;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor( @Inject(HttpClient) private httpClient: HttpClient) {}
 
   /**
    * Get a card from it's given Card ID
@@ -128,6 +126,16 @@ export class PokemontcgIoService {
         return res.data;
       })
     );
+  }
+
+  public getCardsBySetId(setId: string): Observable<SearchResult<Card>> {
+    let url = UrlConsts.BASE_URL + UrlConsts.GET_CARD;
+
+    let setProperty: BaseProperty = new SingleValueProperty(SetSearch.ID, setId);
+    let filter = new Filter([setProperty]);
+    
+    return this.searchCards(filter);
+
   }
 
   /**

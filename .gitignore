@@ -29,6 +29,7 @@ chrome-profiler-events*.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+.angular
 
 # misc
 /.sass-cache
@@ -43,3 +44,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.angular/cache/13.2.0/ng-packagr/content-v2/sha512/0e/a4/2bb46efff95e0000f3abd7e73db8c7cebcf8ca7df7e965afecf4f45ece4a8ecef707fd2d00dd9a8b9df31aa48f9e7aea8e1c2a79dffced71464654ebca0e
